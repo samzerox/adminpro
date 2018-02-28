@@ -147,7 +147,7 @@ export class UsuarioService {
 
     return this.http.delete( url )
               .map( resp => {
-                swal('Usuario borrado', ' Ell usuario ha sido borrao correctamente', 'success');
+                swal('Usuario borrado', ' El usuario ha sido borrao correctamente', 'success');
                 return true;
               });
   }

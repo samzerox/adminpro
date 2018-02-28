@@ -18,16 +18,16 @@ export class UsuariosComponent implements OnInit {
   cargando: boolean = true;
 
   constructor( public _usuariosService: UsuarioService,
-                public _modalUpladoService: ModalUploadService) { }
+                public _modalUploadService: ModalUploadService) { }
 
   ngOnInit() {
     this.cargarUsuarios();
-    this._modalUpladoService.notificacion
+    this._modalUploadService.notificacion
               .subscribe( resp => this.cargarUsuarios() );
   }
 
   mostarModal( id: string ) {
-    this._modalUpladoService.mostrarModal('usuarios', id );
+    this._modalUploadService.mostrarModal('usuarios', id );
   }
 
   cargarUsuarios() {
